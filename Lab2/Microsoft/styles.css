@@ -1,0 +1,312 @@
+body{
+    font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:active, :hover, :focus{
+    outline: 0;
+    outline-offset: 0;
+}
+
+
+
+header{
+    padding: 10px 85px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    margin-right: 18px;
+}
+.logo img{    
+    width: 108px;
+}
+
+
+.nav-bar{
+    display: flex;
+}
+.nav-bar li{
+    margin: 0 11px;
+}
+.nav-bar li a{
+    font-size: 13px;
+    color: #262626;
+    position: relative;
+}
+.nav-bar li a::after{
+    display: none;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #262626;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -3px;
+}
+.nav-bar li a:hover::after{
+    display: block;
+}
+
+
+
+.right{
+    display: flex;
+    align-items: center;
+}
+.sec-nav{
+    display: flex;
+    align-items: center;
+}
+.sec-nav li{
+    margin: 0 6px;
+}
+.sec-nav li a{
+    font-size: 13px;
+    color: #262626;
+    display: flex;
+    align-items: center;
+}
+.sec-nav li a span{
+    position: relative;
+}
+.sec-nav li a span::after{
+    display: none;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #262626;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -7px;
+}
+.sec-nav li a:hover span::after{
+    display: block;
+}
+.sec-nav li a i {
+    font-size: 20px;
+    color: gray;
+    margin-left: 5px;
+}
+.sec-nav li a img{
+    width: 34px;
+    margin-left: 12px;
+}
+.sec-nav .sign{
+    margin: 0 10px 0 30px;
+}
+
+
+.gen_href{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.general{
+    width: 100%;
+    padding: 115px 125px;
+    background: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Pro-AI-11Ed-Sapphire-MC001-3000x1682:VP5-1920x600) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.gen_title_back{
+    width: 470px;
+    background: white;
+    padding: 20px; 
+    border-radius: 2px; 
+    display: inline-block; 
+    max-width: 600px;
+    margin: auto;
+}
+.gen_title{
+    font-weight: 500;
+    font-size: 37px;
+    color: #000000;
+    line-height: 1.2;
+}
+.mid_title{
+    color: #000000;
+    margin-top: 26px;
+    line-height: 1.5;
+}
+
+.gen_link {
+    background: #0067b8;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px; 
+    font-size: 16px; 
+    font-weight: bold;
+    border-radius: 2px; 
+    margin-top: 20px;
+}
+.gen_link:hover{
+    background: #63a0ce;
+}
+
+
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 5%;
+    margin: 48px auto;
+}
+
+.card {
+    background: #fff;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.info_title {
+    font-size: 29px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    color: #000;
+}
+
+.info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ms-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0067b8;
+    color: #ffffff;
+    padding: 8px 12px;
+    min-height: 32px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-top: 0; 
+    min-width: 108px;
+}
+
+.ms-button:hover {
+    background-color: #0058a0;
+}
+.info_buttons {
+    margin-top: auto;  
+    padding-top: 20px;  
+}
+
+.info_buttons a {
+    color: #ffffff;
+}
+.slide {
+    display: flex; 
+    justify-content: center;  
+    align-items: center;
+    height: 30px; 
+    width: 100%;  
+    margin-top: 30px;
+}
+
+.slide img {
+    max-width: 50%; 
+    max-height: 50px; 
+    object-fit: contain; 
+}
+
+.blue-text {
+    background-color: #0078d4;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.blue-text .textt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue-text .textt li a {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.blue-text .textt li a i {
+    color: white;
+    font-size: 16px;
+}
+
+
+.shop-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.shop-item img {
+    width: 50px;
+    height: auto;
+}
+
+.shop-item a {
+    color: #0661a6;
+    font-size: 16px;
+    text-decoration: none;
+    text-decoration: underline;
+}
