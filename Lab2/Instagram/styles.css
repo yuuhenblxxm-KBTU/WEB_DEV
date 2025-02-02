@@ -1,0 +1,160 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.login-section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #dbdbdb;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Billabong', cursive;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fafafa;
+}
+
+.login-btn {
+    background: #0095f6;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.separator span {
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+.facebook-login {
+    background: none;
+    color: #385185;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.forgot {
+    display: block;
+    color: #00376b;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.signup-box {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.signup-box a {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.app-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.app-links p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.buttons img {
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+footer ul li {
+    margin: 5px 10px;
+    font-size: 12px;
+    color: #777;
+}
+
+footer p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
