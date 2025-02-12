@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#header {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#header-two {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin-top: 80px;
+}
+
+.add-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 10px;
+    position: sticky;
+    top: 60px;
+    background: #f4f4f4;
+    padding: 10px;
+    width: 100%;
+    z-index: 900;
+}
+
+#add-task {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #4CAF50;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#add-task:focus {
+    border-color: #388E3C;
+}
+
+#add-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add-button:hover {
+    background-color: #388E3C;
+}
+
+.block-tasks {
+    width: 80%;
+    max-width: 500px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.task-item:hover {
+    background: #f0f0f0;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-item label {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.task-item input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-button img {
+    width: 20px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.delete-button:hover img {
+    opacity: 1;
+}
+
+
+  </style>
+  <title>ToDo List</title>
+</head>
+
+<body>
+<script>
+
+  function addTheTask(){
+
+    const taskInput = document.getElementById("add-task");
+    const taskName = taskInput.value;
+
+    if (taskName === "") {
+      alert("Enter a task");
+      return;
+    }
+
+    const newTask = document.createElement("div");
+    newTask.classList.add("task-item");
+
+    const checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    checkBox.classList.add("tasks");
+
+    const label = document.createElement("label");
+    label.textContent = taskName;
+    label.classList.add("task-label");
+
+    label.style.marginLeft = "10px";
+
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete-button")
+    deleteButton.innerHTML = '<img src="https://cdn-icons-png.flaticon.com/512/6861/6861362.png">';
+    deleteButton.addEventListener("click", function (){
+      taskList.removeChild(newTask);
+    });
+
+    newTask.appendChild(checkBox);
+    newTask.appendChild(label);
+    newTask.appendChild(deleteButton);
+
+    const taskList = document.querySelector(".block-tasks");
+    taskList.appendChild(newTask);
+
+    taskInput.value = "";
+
+  }
+
+</script>
+<h1 id="header">ToDo list</h1>
+<h1 id="header-two"> Shedule tasks </h1>
+<div class="add-block">
+  <input id="add-task" type="text" placeholder="Add new task">
+  <input id="add-button" type="button" value="Add" onclick="addTheTask()">
+</div>
+<div class="block-tasks"></div>
+
+</body>
+
+</html>
