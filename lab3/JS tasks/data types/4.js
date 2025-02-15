@@ -11,8 +11,7 @@ function camelize(str) {
   
   // 2
   function filterRange(arr, a, b) {
-    // added brackets around the expression for better readability
-    return arr.filter(item => (a <= item && item <= b));
+      return arr.filter(item => (a <= item && item <= b));
   }
   
   let arr = [5, 3, 8, 1];
