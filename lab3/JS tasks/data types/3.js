@@ -29,7 +29,6 @@ function sumInput() {
 
     let value = prompt("A number please?", 0);
 
-    // should we cancel?
     if (value === "" || value === null || !isFinite(value)) break;
 
     numbers.push(+value);
@@ -48,10 +47,10 @@ function getMaxSubSum(arr) {
   let maxSum = 0;
   let partialSum = 0;
 
-  for (let item of arr) { // for each item of arr
-    partialSum += item; // add it to partialSum
-    maxSum = Math.max(maxSum, partialSum); // remember the maximum
-    if (partialSum < 0) partialSum = 0; // zero if negative
+  for (let item of arr) { 
+    partialSum += item;-
+    maxSum = Math.max(maxSum, partialSum);
+    if (partialSum < 0) partialSum = 0;
   }
 
   return maxSum;
