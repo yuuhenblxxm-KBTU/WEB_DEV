@@ -10,10 +10,10 @@ function ucFirst(str) {
   function checkSpam(str) {
     let lowerStr = str.toLowerCase();
   
-    return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+    return lowerStr.includes('book') || lowerStr.includes('xxx');
   }
   
-  alert( checkSpam('buy ViAgRA now') );
+  alert( checkSpam('buy bOOk now') );
   alert( checkSpam('free xxxxx') );
   alert( checkSpam("innocent rabbit") );
   
